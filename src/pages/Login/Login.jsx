@@ -1,12 +1,16 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <div>
+    <div className="flex justify-center items-center h-screen px-3">
+      <Helmet>
+        <title>PayPulse || Login</title>
+      </Helmet>
       <div className="w-full max-w-sm p-6 m-auto mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
         <div className="flex justify-center mx-auto">
           <img
-            className="w-auto h-15 sm:h-8"
+            className="w-auto md:h-36 h-24"
             src="https://i.postimg.cc/NFc6xsyf/bankLogo.png"
             alt=""
           />
@@ -15,7 +19,7 @@ const Login = () => {
         <form className="mt-6">
           <div>
             <label
-              for="username"
+              htmlFor="username"
               className="block text-sm text-gray-800 dark:text-gray-200"
             >
               Username
@@ -29,7 +33,7 @@ const Login = () => {
           <div className="mt-4">
             <div className="flex items-center justify-between">
               <label
-                for="password"
+                htmlFor="password"
                 className="block text-sm text-gray-800 dark:text-gray-200"
               >
                 Password
@@ -49,7 +53,7 @@ const Login = () => {
           </div>
 
           <div className="mt-6">
-            <button className="w-full px-6 py-2.5 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-800 rounded-lg hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50">
+            <button className="w-full px-6 py-2.5 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform  rounded-lg  focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50 bg-green-700 hover:rounded-full">
               Sign In
             </button>
           </div>
@@ -58,8 +62,8 @@ const Login = () => {
         <p className="mt-8 text-xs font-light text-center text-gray-400">
           {" "}
           Don't have an account?{" "}
-          <Link to='/registraton'
-            href="#"
+          <Link
+            to="/registration"
             className="font-medium text-gray-700 dark:text-gray-200 hover:underline"
           >
             Create One
